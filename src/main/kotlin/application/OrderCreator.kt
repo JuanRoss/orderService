@@ -2,13 +2,14 @@ package application
 
 import domain.Order
 import domain.OrderRepository
+import domain.OrderStatus
 import jakarta.enterprise.context.ApplicationScoped
 import jakarta.inject.Inject
 
 @ApplicationScoped
 class OrderCreator @Inject constructor(private val orderRepository: OrderRepository){
 
-    fun create(order: Order) {
-        orderRepository.save(order)
+    fun create(order: Order) : Order {
+        return orderRepository.save(order)
     }
 }

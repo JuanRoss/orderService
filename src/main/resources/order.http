@@ -1,7 +1,16 @@
-POST http://localhost:8080/order
+###
+GET http://localhost:8080/order/
+
+###
+
+GET http://localhost:8080/order/c60fb9a3-4dde-4f8b-9873-df94eb8ed467
+
+
+###
+POST http://localhost:8080/order/
 Content-Type: application/json
 
 {
-  "clientId": 1,
-  "items": [1, 2, 3]
+    "items": [{"productId": 1, "quantity": 2}, {"productId": 2, "quantity": 3}],
+    "clientId": 3
 }
